@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+// 1. Base stuff
+@use './base';
+
+// 2. Reusable utility classes
+@use './utilities';
+
+// 3. Layout-related sections
+@use './layout';
+
+// 4. Components
+@use './components';
+
+// 5. Page-specific styles
+@use './pages';

@@ -1,0 +1,27 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+.btn {
+    font-size: var(--fs-15);
+    font-weight: var(--font-regular);
+    letter-spacing: var(--ls-1);
+    text-transform: uppercase;
+    border-radius: var(--roundness-btn);
+    padding: 1.7rem 2.45rem;
+    transition: all 300ms ease;
+
+    &:hover {
+        color: var(--color-white);
+        background-color: var(--color-light-peach);
+    }
+}
+
+.btn--white {
+    background-color: var(--color-white);
+    color: var(--color-black);
+}
+
+.btn--peach {
+    background-color: var(--color-peach);
+    color: var(--color-white);
+}

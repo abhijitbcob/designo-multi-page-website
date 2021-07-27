@@ -1,0 +1,169 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the home page.
+// -----------------------------------------------------------------------------
+@use '../abstracts'as *;
+
+.home-hero {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(54rem, 1fr) 1fr;
+
+    grid-gap: 1.5rem;
+    align-items: start;
+    justify-content: space-between;
+    max-height: 64rem;
+    background-color: var(--color-peach);
+    overflow: hidden;
+    padding-left: 9.5rem;
+
+
+    &__text-wrapper {
+        display: grid;
+        justify-items: start;
+
+        @include respond-to(large) {
+            padding-top: 14.5rem;
+            padding-bottom: 14.5rem;
+        }
+
+        .paragraph {
+            max-width: 44.5rem;
+            margin-top: 2.5rem;
+            margin-bottom: 4rem;
+        }
+    }
+
+    &__img-wrapper {
+        background-image: url("../../assets/home/desktop/image-hero-phone.png");
+        background-repeat: no-repeat;
+        background-position: center -2.5rem;
+        align-self: stretch;
+
+    }
+
+
+
+    &::before {
+        position: absolute;
+        content: '';
+        display: block;
+        height: 64rem;
+        width: 64rem;
+        background-image: url("../../assets/home/desktop/bg-pattern-hero-home.svg");
+        right: 0;
+        bottom: 0;
+        top: 0;
+    }
+
+}
+
+.services {
+    display: grid;
+    grid-column-gap: 3rem;
+    grid-row-gap: 2.4rem;
+
+    @include respond-to(large) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+
+        grid-template-areas: "web app""web graphic";
+
+        margin-block: 16rem;
+    }
+}
+
+.web-design {
+    grid-area: web;
+}
+
+.app-design {
+    grid-area: app;
+}
+
+.graphic-design {
+    grid-area: graphic;
+}
+
+.service {
+    position: relative;
+    border-radius: var(--roundness);
+    overflow: hidden;
+
+    &__text {
+        position: absolute;
+        inset: 0;
+        background-color: hsla(270, 3%, 11%, 49.67%);
+        transition: var(--transition-300);
+        display: grid;
+        place-content: center;
+        grid-row-gap: 2.4rem;
+
+        a:link,
+        a:visited {
+            font-size: 1.5rem;
+            font-weight: var(--font-medium);
+            color: var(--color-white);
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            gap: 2.1rem;
+            justify-content: center;
+
+            img {
+                width: 0.4rem;
+                height: 0.8rem;
+            }
+        }
+
+
+        &:hover {
+            background-color: hsla(11, 73%, 66%, 80%);
+        }
+    }
+}
+
+.features {
+    gap: 2.4rem;
+
+    @include respond-to(large) {
+        gap: 3rem;
+    }
+}
+
+.feature {
+    display: grid;
+    justify-items: center;
+
+
+    &__img {
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            display: block;
+            width: 20.2rem;
+            height: 20.2rem;
+            background-image: url('../../assets/shared/desktop/bg-pattern-small-circle.svg');
+            background-repeat: no-repeat;
+
+        }
+
+        &-2::before {
+            transform: rotate(270deg);
+        }
+
+        &-3::before {
+            transform: rotate(90deg);
+        }
+    }
+
+    .heading-3 {
+        margin-top: 5.3rem;
+    }
+
+    .paragraph {
+        margin-top: 2.6rem;
+        text-align: center;
+    }
+}

@@ -1,0 +1,61 @@
+@use '../abstracts'as *;
+
+.logo img {
+    max-width: 20.2rem;
+}
+
+.header {
+    padding-block: 3.4rem;
+
+    @include respond-to(medium) {
+        padding-block: 6.4rem;
+    }
+
+    &__nav {
+        --link-color: hsl(264, 5%, 20%);
+    }
+}
+
+
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav__list {
+
+    @include respond-to(medium) {
+        display: flex;
+        gap: 4.2rem;
+    }
+
+    a:link,
+    a:visited {
+        font-size: var(--fs-14);
+        text-transform: uppercase;
+        color: var(--link-color);
+        font-weight: var(--font-regular);
+        letter-spacing: var(--ls-2);
+    }
+
+    a:hover,
+    a:active {
+        text-decoration: underline;
+    }
+
+}
+
+
+.footer__nav {
+    --link-color: hsl(0, 0%, 100%);
+
+    &-list {
+        flex-direction: column;
+
+        @include respond-to(medium) {
+            flex-direction: row;
+        }
+    }
+}

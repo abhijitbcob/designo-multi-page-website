@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Designo Agency Website Challenge</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <nav class="header__nav nav">
+        <a href="index.html" class="logo"><img src="./assets/shared/desktop/logo-dark.png" alt="designo logo"></a>
+
+        <ul class="nav__list hide-upto-md">
+          <li><a href="about.html">our company</a></li>
+          <li><a href="locations.html">locations</a></li>
+          <li><a href="contact.html">contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="bg-pattern-leaf">
+      <div class="container">
+        <div class="home-hero has-roundness">
+          <div class="home-hero__text-wrapper">
+            <h1 class="heading-1 heading text-white">
+              Award-winning custom designs and digital branding solutions
+            </h1>
+            <p class="paragraph text-white">
+              With over 10 years in the industry, we are experienced in creating fully responsive websites, app design,
+              and engaging brand experiences. Find out more about our services.
+            </p>
+            <a href="about.html" class="btn btn--white">learn more</a>
+          </div>
+          <div class="home-hero__img-wrapper">
+          </div>
+        </div>
+
+        <div class="services">
+          <div class="web-design service">
+            <picture>
+              <source media="(min-width: 992px)" srcset="./assets/home/desktop/image-web-design-large.jpg">
+              <source media="(min-width: 768px)" srcset="./assets/home/tablet/image-web-design.jpg">
+              <img src="./assets/home/tablet/image-web-design.jpg" alt="web design">
+            </picture>
+            <div class="service__text">
+              <h2 class="heading-2 text-white">Web Design</h2>
+              <a href="web-design.html">view projects <img src="./assets/shared/desktop/icon-right-arrow.svg"
+                  alt="right arrow"></a>
+            </div>
+          </div>
+          <div class="app-design service">
+            <picture>
+              <source media="(min-width: 992px)" srcset="./assets/home/desktop/image-app-design.jpg">
+              <source media="(min-width: 768px)" srcset="./assets/home/tablet/image-app-design.jpg">
+              <img src="./assets/home/tablet/image-app-design.jpg" alt="app design">
+            </picture>
+            <div class="service__text">
+              <h2 class="heading-2 text-white">App Design</h2>
+              <a href="app-design.html">view projects <img src="./assets/shared/desktop/icon-right-arrow.svg"
+                  alt="right arrow"></a>
+            </div>
+          </div>
+          <div class="graphic-design service">
+            <picture>
+              <source media="(min-width: 992px)" srcset="./assets/home/desktop/image-graphic-design.jpg">
+              <source media="(min-width: 768px)" srcset="./assets/home/tablet/image-graphic-design.jpg">
+              <img src="./assets/home/tablet/image-graphic-design.jpg" alt="graphic design">
+            </picture>
+            <div class="service__text">
+              <h2 class="heading-2 text-white">Graphic Design</h2>
+              <a href="graphic-design.html">view projects <img src="./assets/shared/desktop/icon-right-arrow.svg"
+                  alt="right arrow"></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="features grid lg:grid-col-3">
+          <div class="feature">
+            <div class="feature__img feature__img-1">
+              <img src="./assets/home/desktop/illustration-passionate.svg" alt="man using laptop">
+            </div>
+            <h3 class="heading-3">Passionate</h3>
+            <p class="paragraph">
+              Each project starts with an in-depth brand research to ensure we only create products that serve a
+              purpose. We merge
+              art, design, and technology into exciting new solutions.
+            </p>
+          </div>
+
+          <div class="feature">
+            <div class="feature__img feature__img-2">
+              <img src="./assets/home/desktop/illustration-resourceful.svg" alt="resourceful">
+            </div>
+            <h3 class="heading-3">Resourceful</h3>
+            <p class="paragraph">
+              Everything that we do has a strategic purpose. We use an agile approach in all of our projects and value
+              customer
+              collaboration. It guarantees superior results that fulfill our clients’ needs.
+            </p>
+          </div>
+
+          <div class="feature">
+            <div class="feature__img feature__img-3">
+              <img src="./assets/home/desktop/illustration-friendly.svg" alt="friendly">
+            </div>
+            <h3 class="heading-3">Friendly</h3>
+            <p class="paragraph">
+              We are a group of enthusiastic folks who know how to put people first. Our success depends on our
+              customers, and we
+              strive to give them the best experience a company can provide.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</body>
+
+</html>

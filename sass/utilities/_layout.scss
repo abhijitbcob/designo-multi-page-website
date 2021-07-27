@@ -1,0 +1,28 @@
+@use '../abstracts'as *;
+
+
+/* Display utilities for different viewport width*/
+.hide-upto-md {
+    @media only screen and(max-width: 768px) {
+        display: none;
+    }
+}
+
+.hide-from-md {
+    @include respond-to(medium) {
+        display: none;
+    }
+}
+
+
+.hide-upto-lg {
+    @media only screen and(max-width: 992px) {
+        display: none;
+    }
+}
+
+.hide-from-lg {
+    @media only screen and(min-width: 992px) {
+        display: none;
+    }
+}

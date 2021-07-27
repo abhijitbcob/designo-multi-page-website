@@ -1,0 +1,37 @@
+/**
+ * Basic typography style for copy text
+ */
+@use '../abstracts'as *;
+
+.text-white {
+  color: var(--color-white);
+}
+
+.heading {
+  font-weight: var(--font-medium);
+}
+
+.heading-1 {
+  font-size: 4.8rem;
+  line-height: 4.8rem;
+}
+
+.heading-2 {
+  font-size: 4rem;
+  line-height: 4.8rem;
+  letter-spacing: 0.2rem;
+}
+
+.heading-3 {
+  font-size: 2rem;
+  line-height: 2.6rem;
+  letter-spacing: 0.5rem;
+  text-transform: uppercase;
+  font-weight: var(--font-medium);
+}
+
+.paragraph {
+  font-size: 1.6rem;
+  font-weight: var(--font-regular);
+  line-height: 2.6rem;
+}
