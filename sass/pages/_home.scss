@@ -5,40 +5,76 @@
 
 .home-hero {
     position: relative;
+    max-height: 84.3rem;
     display: grid;
-    grid-template-columns: minmax(54rem, 1fr) 1fr;
+    justify-content: center;
 
-    grid-gap: 1.5rem;
+
+    @include respond-to(medium) {
+        border-radius: var(--roundness);
+    }
+
+    @include respond-to(large) {
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: space-between;
+    }
+
     align-items: start;
-    justify-content: space-between;
-    max-height: 64rem;
     background-color: var(--color-peach);
     overflow: hidden;
-    padding-left: 9.5rem;
+
+    @include respond-to(large) {
+        padding-left: 9.5rem;
+        max-height: 64rem;
+        grid-gap: 1.5rem;
+    }
 
 
     &__text-wrapper {
         display: grid;
-        justify-items: start;
+        padding-top: rem;
+        justify-items: center;
+        max-width: 54rem;
+        padding-inline: 2.4rem;
+        padding-top: 8rem;
+
+        @include respond-to(medium) {
+            padding-inline: 0;
+            padding-top: 6rem;
+        }
 
         @include respond-to(large) {
             padding-top: 14.5rem;
             padding-bottom: 14.5rem;
+            justify-items: start;
         }
 
         .paragraph {
-            max-width: 44.5rem;
+            max-width: 45rem;
             margin-top: 2.5rem;
-            margin-bottom: 4rem;
+            margin-bottom: 1.9rem;
+
+            @include respond-to(large) {
+                max-width: 44.5rem;
+                margin-bottom: 4rem;
+            }
         }
     }
 
     &__img-wrapper {
         background-image: url("../../assets/home/desktop/image-hero-phone.png");
         background-repeat: no-repeat;
-        background-position: center -2.5rem;
+        background-position: center -7rem;
         align-self: stretch;
 
+        height: 48.8rem;
+        margin-top: -3rem;
+
+        @include respond-to(large) {
+            background-position: center -2.5rem;
+            height: auto;
+            margin-top: 0;
+        }
     }
 
 
@@ -50,24 +86,35 @@
         height: 64rem;
         width: 64rem;
         background-image: url("../../assets/home/desktop/bg-pattern-hero-home.svg");
-        right: 0;
-        bottom: 0;
-        top: 0;
+        top: 50%;
+        transform: translateY(-50%);
+
+        @include respond-to(medium) {
+            right: -12.1rem;
+        }
+
+        @include respond-to(large) {
+            top: 0;
+            right: 0;
+            transform: translateY(0);
+        }
     }
 
 }
 
 .services {
     display: grid;
-    grid-column-gap: 3rem;
-    grid-row-gap: 2.4rem;
+    grid-template-areas: 'web''app''graphic';
+    grid-row-gap: 2.5rem;
+    margin-block: 12rem;
+
 
     @include respond-to(large) {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, 1fr);
-
         grid-template-areas: "web app""web graphic";
-
+        grid-column-gap: 3rem;
+        grid-row-gap: 2.4rem;
         margin-block: 16rem;
     }
 }
@@ -95,13 +142,20 @@
         background-color: hsla(270, 3%, 11%, 49.67%);
         transition: var(--transition-300);
         display: grid;
-        place-content: center;
-        grid-row-gap: 2.4rem;
+        align-content: center;
+        justify-items: center;
+        grid-gap: 1.2rem;
+
+        @include respond-to(medium) {
+            grid-gap: 2.4rem;
+        }
 
         a:link,
         a:visited {
             font-size: 1.5rem;
             font-weight: var(--font-medium);
+            letter-spacing: var(--ls-5);
+            line-height: 2.2rem;
             color: var(--color-white);
             text-transform: uppercase;
             display: flex;
@@ -133,7 +187,18 @@
 .feature {
     display: grid;
     justify-items: center;
+    align-items: center;
+    grid-gap: 4.8rem;
 
+
+    @include respond-to(medium) {
+        grid-auto-flow: column;
+    }
+
+    @include respond-to(large) {
+        grid-auto-flow: row;
+        grid-gap: 5.3rem;
+    }
 
     &__img {
         position: relative;
@@ -158,12 +223,77 @@
         }
     }
 
-    .heading-3 {
-        margin-top: 5.3rem;
+
+    &__text {
+        display: grid;
+        grid-gap: 3.2rem;
+
+        text-align: center;
+
+        @include respond-to(medium) {
+            text-align: left;
+            grid-gap: 1.6rem;
+        }
+
+        @include respond-to(large) {
+            text-align: center;
+            grid-gap: 3.2rem;
+
+        }
+    }
+}
+
+.banner {
+    padding: 6.4rem 2.4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    gap: 3.2rem;
+
+    background-color: var(--color-peach);
+    background-image: url('../../assets/shared/desktop/bg-pattern-call-to-action.svg');
+    background-repeat: no-repeat;
+    background-position: center -15%;
+
+    margin-top: 6.7rem;
+
+    @include respond-to(large) {
+        padding: 7.2rem 9.5rem;
+        margin-top: 16rem;
+        flex-direction: row;
+        background-position: center right;
+
     }
 
-    .paragraph {
-        margin-top: 2.6rem;
-        text-align: center;
+    &__text {
+        color: var(--color-white);
+        display: grid;
+        justify-items: center;
+        grid-gap: 1.3rem;
+
+        @include respond-to(large) {
+            justify-items: start;
+
+        }
+
+        h3 {
+            font-size: 3.2rem;
+            line-height: 3.6rem;
+            font-weight: var(--font-medium);
+
+            @include respond-to(medium) {
+                max-width: 27.5rem;
+
+                font-size: 4rem;
+                line-height: 1;
+            }
+        }
+
+        .paragraph {
+            @include respond-to(medium) {
+                max-width: 46rem;
+            }
+        }
     }
 }

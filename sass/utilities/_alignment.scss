@@ -1,0 +1,12 @@
+@use '../abstracts'as *;
+
+.text-center {
+    text-align: center;
+}
+
+
+.lg\:text-left {
+    @include respond-to(large) {
+        text-align: left;
+    }
+}

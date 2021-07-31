@@ -3,7 +3,8 @@
 // -----------------------------------------------------------------------------
 .btn {
     font-size: var(--fs-15);
-    font-weight: var(--font-regular);
+    font-weight: var(--font-medium);
+    line-height: 2.2rem;
     letter-spacing: var(--ls-1);
     text-transform: uppercase;
     border-radius: var(--roundness-btn);

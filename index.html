@@ -30,13 +30,13 @@
 
   <main>
     <div class="bg-pattern-leaf">
-      <div class="container">
-        <div class="home-hero has-roundness">
+      <div class="container-sm">
+        <div class="home-hero">
           <div class="home-hero__text-wrapper">
-            <h1 class="heading-1 heading text-white">
+            <h1 class="heading-1 heading text-white text-center lg:text-left">
               Award-winning custom designs and digital branding solutions
             </h1>
-            <p class="paragraph text-white">
+            <p class="paragraph text-white text-center lg:text-left">
               With over 10 years in the industry, we are experienced in creating fully responsive websites, app design,
               and engaging brand experiences. Find out more about our services.
             </p>
@@ -45,13 +45,14 @@
           <div class="home-hero__img-wrapper">
           </div>
         </div>
-
+      </div>
+      <div class="container">
         <div class="services">
           <div class="web-design service">
             <picture>
               <source media="(min-width: 992px)" srcset="./assets/home/desktop/image-web-design-large.jpg">
               <source media="(min-width: 768px)" srcset="./assets/home/tablet/image-web-design.jpg">
-              <img src="./assets/home/tablet/image-web-design.jpg" alt="web design">
+              <img src="./assets/home/mobile/image-web-design.jpg" alt="web design">
             </picture>
             <div class="service__text">
               <h2 class="heading-2 text-white">Web Design</h2>
@@ -63,7 +64,7 @@
             <picture>
               <source media="(min-width: 992px)" srcset="./assets/home/desktop/image-app-design.jpg">
               <source media="(min-width: 768px)" srcset="./assets/home/tablet/image-app-design.jpg">
-              <img src="./assets/home/tablet/image-app-design.jpg" alt="app design">
+              <img src="./assets/home/mobile/image-app-design.jpg" alt="app design">
             </picture>
             <div class="service__text">
               <h2 class="heading-2 text-white">App Design</h2>
@@ -75,7 +76,7 @@
             <picture>
               <source media="(min-width: 992px)" srcset="./assets/home/desktop/image-graphic-design.jpg">
               <source media="(min-width: 768px)" srcset="./assets/home/tablet/image-graphic-design.jpg">
-              <img src="./assets/home/tablet/image-graphic-design.jpg" alt="graphic design">
+              <img src="./assets/home/mobile/image-graphic-design.jpg" alt="graphic design">
             </picture>
             <div class="service__text">
               <h2 class="heading-2 text-white">Graphic Design</h2>
@@ -90,42 +91,62 @@
             <div class="feature__img feature__img-1">
               <img src="./assets/home/desktop/illustration-passionate.svg" alt="man using laptop">
             </div>
-            <h3 class="heading-3">Passionate</h3>
-            <p class="paragraph">
-              Each project starts with an in-depth brand research to ensure we only create products that serve a
-              purpose. We merge
-              art, design, and technology into exciting new solutions.
-            </p>
+            <div class="feature__text">
+              <h3 class="heading-3">Passionate</h3>
+              <p class="paragraph">
+                Each project starts with an in-depth brand research to ensure we only create products that serve a
+                purpose. We merge
+                art, design, and technology into exciting new solutions.
+              </p>
+            </div>
           </div>
 
           <div class="feature">
             <div class="feature__img feature__img-2">
               <img src="./assets/home/desktop/illustration-resourceful.svg" alt="resourceful">
             </div>
-            <h3 class="heading-3">Resourceful</h3>
-            <p class="paragraph">
-              Everything that we do has a strategic purpose. We use an agile approach in all of our projects and value
-              customer
-              collaboration. It guarantees superior results that fulfill our clients’ needs.
-            </p>
+            <div class="feature__text">
+              <h3 class="heading-3">Resourceful</h3>
+              <p class="paragraph">
+                Everything that we do has a strategic purpose. We use an agile approach in all of our projects and value
+                customer
+                collaboration. It guarantees superior results that fulfill our clients’ needs.
+              </p>
+            </div>
           </div>
 
           <div class="feature">
             <div class="feature__img feature__img-3">
               <img src="./assets/home/desktop/illustration-friendly.svg" alt="friendly">
             </div>
-            <h3 class="heading-3">Friendly</h3>
-            <p class="paragraph">
-              We are a group of enthusiastic folks who know how to put people first. Our success depends on our
-              customers, and we
-              strive to give them the best experience a company can provide.
-            </p>
+            <div class="feature__text">
+              <h3 class="heading-3">Friendly</h3>
+              <p class="paragraph">
+                We are a group of enthusiastic folks who know how to put people first. Our success depends on our
+                customers, and we
+                strive to give them the best experience a company can provide.
+              </p>
+            </div>
           </div>
         </div>
+
+        <article class="banner has-roundness">
+          <div class="banner__text text-center lg:text-left">
+            <h3>Let’s talk about your project</h3>
+            <p class="paragraph">
+              Ready to take it to the next level? Contact us today and find out how our expertise can help your business
+              grow.
+            </p>
+          </div>
+          <a href="contact.html" class="btn btn--white">Get in touch</a>
+        </article>
       </div>
     </div>
-
   </main>
+
+  <footer>
+
+  </footer>
 </body>
 
 </html>
