@@ -1,3 +1,57 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the footer of the site/application.
 // -----------------------------------------------------------------------------
+@use '../abstracts'as *;
+
+.footer {
+    background-color: var(--color-dark-grey);
+    padding-top: 21.3rem;
+    padding-bottom: 7.2rem;
+
+    @include respond-to(medium) {
+        padding-top: 14.4rem;
+    }
+
+    &__nav {
+        @include respond-to(medium) {
+            padding-bottom: 4rem;
+        }
+
+        &-hr {
+            width: 100%;
+            height: 1px;
+            background-color: #fff;
+            margin-block: 3.2rem;
+            opacity: 10%;
+        }
+    }
+
+    &__details {
+        display: grid;
+        grid-gap: 4rem;
+        justify-items: center;
+        margin-top: 4rem;
+
+        @include respond-to(medium) {
+            grid-template-columns: repeat(3, 1fr);
+            border-top: 1px solid hsla(0, 0%, 100%, 10%);
+            justify-items: start;
+            padding-top: 3.1rem;
+            margin-top: 0;
+        }
+
+
+        &-contact {
+            opacity: 50%;
+        }
+    }
+
+    &__social {
+        gap: 1.6rem;
+
+        @include respond-to(medium) {
+            justify-self: end;
+            align-self: end;
+        }
+    }
+}

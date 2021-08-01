@@ -5,8 +5,18 @@
 }
 
 
+.md\:text-left {
+    @include respond-to(medium) {
+        text-align: left;
+    }
+}
+
 .lg\:text-left {
     @include respond-to(large) {
         text-align: left;
     }
+}
+
+.items-center {
+    align-items: center;
 }

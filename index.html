@@ -8,7 +8,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;700&display=swap" rel="stylesheet">
   <title>Frontend Mentor | Designo Agency Website Challenge</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -19,7 +19,7 @@
       <nav class="header__nav nav">
         <a href="index.html" class="logo"><img src="./assets/shared/desktop/logo-dark.png" alt="designo logo"></a>
 
-        <ul class="nav__list hide-upto-md">
+        <ul class="nav__list flex hide-upto-md">
           <li><a href="about.html">our company</a></li>
           <li><a href="locations.html">locations</a></li>
           <li><a href="contact.html">contact</a></li>
@@ -132,7 +132,7 @@
 
         <article class="banner has-roundness">
           <div class="banner__text text-center lg:text-left">
-            <h3>Let’s talk about your project</h3>
+            <h3 class="heading">Let’s talk about your project</h3>
             <p class="paragraph">
               Ready to take it to the next level? Contact us today and find out how our expertise can help your business
               grow.
@@ -144,8 +144,42 @@
     </div>
   </main>
 
-  <footer>
+  <footer class="footer">
+    <div class="container">
+      <nav class="footer__nav nav flex-col md:flex-row">
+        <a href="index.html" class="logo"><img src="./assets/shared/desktop/logo-light.png" alt="designo logo"></a>
+        <div class="footer__nav-hr hide-from-md"></div>
+        <ul class="footer__nav-list nav__list flex flex-col md:flex-row text-center">
+          <li><a href="about.html">our company</a></li>
+          <li><a href="locations.html">locations</a></li>
+          <li><a href="contact.html">contact</a></li>
+        </ul>
+      </nav>
 
+      <div class="footer__details md:text-left text-center">
+        <div class="footer__details-contact text-white">
+          <p class="text-bold">Designo Central Office</b></p>
+          <p>3886 Wellington Street</p>
+          <p>Toronto, Ontario M9C 3J5</p>
+        </div>
+
+        <div class="footer__details-contact text-white text-bold">
+          <p>Contact Us (Central Office)</b></p>
+          <p>P : +1 253-863-8967</b></p>
+          <p>M : contact@designo.co</b></p>
+        </div>
+
+        <div class="footer__social flex items-center">
+          <a href="https://facebook.com"><img src="./assets/shared/desktop/icon-facebook.svg" alt="facebook icon"></a>
+          <a href="https://youtube.com"><img src="./assets/shared/desktop/icon-youtube.svg" alt="youtube icon"></a>
+          <a href="https://twitter.com"><img src="./assets/shared/desktop/icon-twitter.svg" alt="twitter icon"></a>
+          <a href="https://pinterest.com"><img src="./assets/shared/desktop/icon-pinterest.svg"
+              alt="pinterest icon"></a>
+          <a href="https://instagram.com"><img src="./assets/shared/desktop/icon-instagram.svg"
+              alt="instagram icon"></a>
+        </div>
+      </div>
+    </div>
   </footer>
 </body>
 

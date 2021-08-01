@@ -1,0 +1,15 @@
+@use '../abstracts'as *;
+
+.flex {
+    display: flex;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.md\:flex-row {
+    @include respond-to(medium) {
+        flex-direction: row;
+    }
+}

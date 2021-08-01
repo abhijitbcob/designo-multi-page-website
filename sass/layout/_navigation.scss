@@ -16,7 +16,15 @@
     }
 }
 
+.footer {
+    &__nav {
+        --link-color: hsl(0, 0%, 100%);
 
+        &-list {
+            gap: 3.2rem;
+        }
+    }
+}
 
 .nav {
     display: flex;
@@ -27,7 +35,6 @@
 .nav__list {
 
     @include respond-to(medium) {
-        display: flex;
         gap: 4.2rem;
     }
 
@@ -37,6 +44,7 @@
         text-transform: uppercase;
         color: var(--link-color);
         font-weight: var(--font-regular);
+        line-height: 1;
         letter-spacing: var(--ls-2);
     }
 
@@ -45,17 +53,4 @@
         text-decoration: underline;
     }
 
-}
-
-
-.footer__nav {
-    --link-color: hsl(0, 0%, 100%);
-
-    &-list {
-        flex-direction: column;
-
-        @include respond-to(medium) {
-            flex-direction: row;
-        }
-    }
 }
