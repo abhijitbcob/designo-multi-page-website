@@ -3,7 +3,7 @@
 
 /* Display utilities for different viewport width*/
 .hide-upto-md {
-    @media only screen and(max-width: 768px) {
+    @media only screen and(max-width: 767px) {
         display: none;
     }
 }

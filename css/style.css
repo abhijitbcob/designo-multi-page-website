@@ -182,7 +182,7 @@ li {
 }
 
 /* Display utilities for different viewport width*/
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
   .hide-upto-md {
     display: none;
   }
@@ -208,6 +208,10 @@ li {
 
 .has-roundness {
   border-radius: var(--roundness);
+}
+
+.overflow-hidden {
+  overflow: hidden;
 }
 
 .container {
@@ -298,6 +302,91 @@ li {
 .nav__list a:hover,
 .nav__list a:active {
   text-decoration: underline;
+}
+
+#menu-toggler {
+  border: none;
+  background: transparent;
+  margin-left: auto;
+  height: 1.7rem;
+  display: grid;
+  gap: 0.4rem;
+}
+#menu-toggler span {
+  display: block;
+  position: relative;
+  width: 2.4rem;
+  height: 0.4rem;
+  background-color: var(--color-black);
+  transition: 300ms ease-in-out;
+  transition-property: margin, transform, opacity, transform-origin;
+}
+#menu-toggler:focus-visible {
+  outline: 2px dotted var(--color-black);
+  outline-offset: 1rem;
+}
+@media (min-width: 576px) {
+  #menu-toggler {
+    display: none;
+  }
+}
+
+.open #menu-toggler span:nth-child(1) {
+  transform-origin: top left;
+  margin-top: -0.15rem;
+  transform: rotate(45deg);
+}
+.open #menu-toggler span:nth-child(2) {
+  transform: translateX(100%);
+  opacity: 0;
+}
+.open #menu-toggler span:nth-child(3) {
+  transform-origin: bottom left;
+  margin-bottom: -0.15rem;
+  transform: rotate(-45deg);
+}
+
+.overlay {
+  position: fixed;
+  top: 9.6rem;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0);
+  z-index: 20;
+  transform: translateX(100%);
+  transition: 300ms ease-in-out;
+  transition-property: transform, backround-color;
+}
+
+.open .overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  transform: translateX(0);
+}
+@media (min-width: 576px) {
+  .open .overlay {
+    display: none;
+  }
+}
+
+.mobile-nav {
+  background-color: var(--color-black);
+  margin-left: auto;
+}
+.mobile-nav-list {
+  display: grid;
+  gap: 3.2rem;
+  padding-block: 4.8rem;
+  padding-inline: 2.4rem;
+}
+.mobile-nav-list a:link,
+.mobile-nav-list a:visited {
+  font-size: 2.4rem;
+  color: var(--color-white);
+  font-weight: var(--font-regular);
+  line-height: 2.5rem;
+  letter-spacing: var(--ls-2);
+  text-transform: uppercase;
 }
 
 .footer {
@@ -659,4 +748,31 @@ li {
     text-align: center;
     grid-gap: 3.2rem;
   }
+}
+
+.home-main {
+  position: relative;
+}
+.home-main::before, .home-main::after {
+  display: none;
+  content: "";
+  position: absolute;
+  width: 1006px;
+  height: 594px;
+  background-image: url("../../assets/shared/desktop/bg-pattern-leaf.svg");
+}
+@media (min-width: 992px) {
+  .home-main::before, .home-main::after {
+    display: block;
+  }
+}
+.home-main::before {
+  left: 0;
+  top: 475px;
+}
+.home-main::after {
+  right: 0;
+  bottom: 7.4rem;
+  transform: rotate(-180deg);
+  z-index: -1;
 }/*# sourceMappingURL=style.css.map */

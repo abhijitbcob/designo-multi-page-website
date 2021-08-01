@@ -242,3 +242,36 @@
         }
     }
 }
+
+
+// Home bg pattern leaf
+
+.home-main {
+    position: relative;
+
+    &::before,
+    &::after {
+        display: none;
+        content: '';
+        position: absolute;
+        width: 1006px;
+        height: 594px;
+        background-image: url('../../assets/shared/desktop/bg-pattern-leaf.svg');
+
+        @include respond-to(large) {
+            display: block;
+        }
+    }
+
+    &::before {
+        left: 0;
+        top: 475px;
+    }
+
+    &::after {
+        right: 0;
+        bottom: 7.4rem;
+        transform: rotate(-180deg);
+        z-index: -1;
+    }
+}

@@ -52,5 +52,101 @@
     a:active {
         text-decoration: underline;
     }
+}
 
+
+// Mobile Navigation
+// Mobile Menu toggler
+#menu-toggler {
+    border: none;
+    background: transparent;
+    margin-left: auto;
+    height: 1.7rem;
+    display: grid;
+    gap: 0.4rem;
+
+    span {
+        display: block;
+        position: relative;
+        width: 2.4rem;
+        height: 0.4rem;
+        background-color: var(--color-black);
+        transition: 300ms ease-in-out;
+        transition-property: margin, transform, opacity, transform-origin;
+    }
+
+    &:focus-visible {
+        outline: 2px dotted var(--color-black);
+        outline-offset: 1rem;
+    }
+
+    @include respond-to(small) {
+        display: none;
+    }
+
+}
+
+.open #menu-toggler span {
+    &:nth-child(1) {
+        transform-origin: top left;
+        margin-top: -0.15rem;
+        transform: rotate(45deg);
+    }
+
+    &:nth-child(2) {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    &:nth-child(3) {
+        transform-origin: bottom left;
+        margin-bottom: -0.15rem;
+        transform: rotate(-45deg);
+    }
+
+}
+
+.overlay {
+    position: fixed;
+    top: 9.6rem;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: hsla(0, 0%, 0%, 0%);
+    z-index: 20;
+    transform: translateX(100%);
+    transition: 300ms ease-in-out;
+    transition-property: transform, backround-color;
+}
+
+.open .overlay {
+    background-color: hsla(0, 0%, 0%, 50%);
+    transform: translateX(0);
+
+    @include respond-to(small) {
+        display: none;
+    }
+}
+
+.mobile-nav {
+    background-color: var(--color-black);
+    margin-left: auto;
+
+    &-list {
+        display: grid;
+        gap: 3.2rem;
+        padding-block: 4.8rem;
+        padding-inline: 2.4rem;
+
+
+        a:link,
+        a:visited {
+            font-size: 2.4rem;
+            color: var(--color-white);
+            font-weight: var(--font-regular);
+            line-height: 2.5rem;
+            letter-spacing: var(--ls-2);
+            text-transform: uppercase;
+        }
+    }
 }
