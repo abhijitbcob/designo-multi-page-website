@@ -1,0 +1,128 @@
+// CONTACT FROM
+@use '../abstracts'as *;
+
+.contact-main {
+    @include respond-to(large) {
+        background-image: url('../../assets/shared/desktop/bg-pattern-leaf.svg');
+        background-repeat: no-repeat;
+        background-position: right 130%;
+    }
+}
+
+.contact-form-block {
+    background-color: var(--color-peach);
+    padding-block: 7.2rem;
+    padding-inline: 2.4rem;
+    background-image: url('../../assets/contact/mobile/bg-pattern-hero-contact-mobile.svg');
+    background-repeat: no-repeat;
+    grid-gap: 4.8rem;
+
+    @include respond-to(medium) {
+        background-image: url('../../assets/contact/desktop/bg-pattern-hero-desktop.svg');
+        background-position: -1rem bottom;
+        grid-gap: 4rem;
+    }
+
+    @include respond-to(large) {
+        padding-block: 5.5rem;
+        grid-gap: 2rem;
+    }
+
+    article {
+        grid-gap: 2.4rem;
+
+        @include respond-to(medium) {
+            grid-gap: 3.2rem;
+            max-width: 57.3rem;
+        }
+
+        @include respond-to(large) {
+            justify-self: end;
+            max-width: 44.5rem;
+            margin-top: -2rem;
+        }
+    }
+
+    justify-items: center;
+}
+
+
+
+.form {
+    width: 100%;
+    display: grid;
+    grid-row-gap: 2.3rem;
+    justify-items: center;
+
+    max-width: 57.3rem;
+
+    @include respond-to(large) {
+        max-width: 38rem;
+    }
+
+    &__input {
+        width: 100%;
+        color: var(--color-white);
+        background-color: transparent;
+
+        font-size: 1.5rem;
+        font-family: var(--ff-primary);
+        font-weight: var(--font-medium);
+        outline: none;
+        border: none;
+        border-bottom: 1px solid var(--color-white);
+        padding-bottom: 1.2rem;
+        padding-left: 1.6rem;
+
+        &:focus {
+            border-width: 3px;
+        }
+
+        &::placeholder {
+            color: var(--color-white);
+            font-size: inherit;
+            font-family: inherit;
+            font-weight: inherit;
+            opacity: 0.5;
+        }
+
+        &[name='message'] {
+            min-height: 9.4rem;
+        }
+
+        &-error {
+            &::placeholder {
+                opacity: 1;
+            }
+        }
+    }
+
+    button {
+        padding-inline: 4.7rem;
+
+        @include respond-to(medium) {
+            justify-self: end;
+
+        }
+    }
+
+    &__group {
+        position: relative;
+        width: 100%;
+    }
+
+    &__error {
+        position: absolute;
+        line-height: 1;
+        font-size: 1.2rem;
+        right: 1.2rem;
+        bottom: 1.5rem;
+        color: var(--color-white);
+        font-weight: var(--font-regular);
+        font-style: italic;
+
+        display: flex;
+        align-items: center;
+        gap: 0.9rem;
+    }
+}

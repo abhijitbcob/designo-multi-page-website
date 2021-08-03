@@ -1,32 +1,38 @@
 @use '../abstracts'as *;
 
-
-.banner {
-    position: relative;
-    padding: 6.4rem 2.4rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
-    gap: 3.2rem;
-
-    background-color: var(--color-peach);
-    background-image: url('../../assets/shared/desktop/bg-pattern-call-to-action.svg');
-    background-repeat: no-repeat;
-    background-position: center -15%;
-    transform: translateY(50%);
+// BANNER WITH CTA BUTTON
+.cta-banner {
+    width: 100%;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
     @include respond-to(medium) {
-        transform: translateY(8.5rem);
+        transform: translate(-50%, -76%);
     }
 
-    @include respond-to(large) {
-        padding: 7.2rem 9.5rem;
-        flex-direction: row;
-        background-position: center right;
-        margin-top: 8.8rem;
-        transform: translateY(7.2rem);
+    &__inner {
+        padding: 6.4rem 2.4rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        gap: 3.2rem;
+
+        background-color: var(--color-peach);
+        background-image: url('../../assets/shared/desktop/bg-pattern-call-to-action.svg');
+        background-repeat: no-repeat;
+        background-position: center -15%;
+
+
+        @include respond-to(large) {
+            padding: 7.2rem 9.5rem;
+            flex-direction: row;
+            background-position: center right;
+        }
     }
+
 
     &__text {
         color: var(--color-white);

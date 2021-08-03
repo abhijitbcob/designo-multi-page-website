@@ -10,62 +10,194 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;700&display=swap" rel="stylesheet">
   <title>Frontend Mentor | Designo Agency Website Challenge</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-  Our Company
-  Locations
-  Contact
+  <header class="header">
+    <div class="container">
+      <nav class="header__nav nav">
+        <a href="index.html" class="logo"><img src="./assets/shared/desktop/logo-dark.png" alt="designo logo"></a>
 
-  About us
-  Founded in 2010, we are a creative agency that produces lasting results for our clients.
-  We’ve partnered with many startups, corporations, and nonprofits alike to craft designs
-  that make real impact. We’re always looking forward to creating brands, products, and
-  digital experiences that connect with our clients' audiences.
+        <ul class="nav__list flex hide-upto-md">
+          <li><a href="about.html">our company</a></li>
+          <li><a href="locations.html">locations</a></li>
+          <li><a href="contact.html">contact</a></li>
+        </ul>
 
-  World-class talent
-  We are a crew of strategists, problem-solvers, and technologists. Every design is thoughtfully
-  crafted from concept to launch, ensuring success in its given market. We are constantly updating
-  our skills in a myriad of platforms.
+        <button id="menu-toggler">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+    </div>
 
-  Our team is multi-disciplinary and we are not merely interested in form — content and meaning
-  are just as important. We give great importance to craftsmanship, service, and prompt delivery.
-  Clients have always been impressed with our high-quality outcomes that encapsulates their
-  brand’s story and mission.
+    <div class="overlay">
+      <nav class="mobile-nav">
+        <ul class="mobile-nav-list">
+          <li><a href="about.html">our company</a></li>
+          <li><a href="locations.html">locations</a></li>
+          <li><a href="contact.html">contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-  The real deal
-  As strategic partners in our clients’ businesses, we are ready to take on any challenge as our own.
-  Solving real problems require empathy and collaboration, and we strive to bring a fresh perspective to every
-  opportunity. We make design and technology more accessible and give you tools to measure success.
+  <main class="u-main-huge-pb about-main">
+    <div class="container-sm">
+      <article class="flex about-hero-article text-white flex-col lg:flex-row roundness-from-md">
+        <picture class="lg:order-2">
+          <source media="(min-width: 992px)" srcset="./assets/about/desktop/image-about-hero.jpg">
+          <source media="(min-width: 768px)" srcset="./assets/about/tablet/image-about-hero.jpg">
+          <img class="h-full w-full" src="./assets/about/mobile/image-about-hero.jpg" alt="team sitting together">
+        </picture>
 
-  We are visual storytellers in appealing and captivating ways. By combining business and marketing strategies,
-  we inspire audiences to take action and drive real results.
+        <div class="about-hero-article__text text-center lg:text-left lg:order-1 grid align-content-center">
+          <h1 class="heading-1">About us</h1>
+          <p class="paragraph">
+            Founded in 2010, we are a creative agency that produces lasting results for our clients.
+            We’ve partnered with many startups, corporations, and nonprofits alike to craft designs
+            that make real impact. We’re always looking forward to creating brands, products, and
+            digital experiences that connect with our clients' audiences.
+          </p>
+        </div>
+      </article>
 
-  Canada
-  See location
+      <article class="about-article-block flex flex-col lg:flex-row roundness-from-md first-block">
+        <picture>
+          <source media="(min-width: 992px)" srcset="./assets/about/desktop/image-world-class-talent.jpg">
+          <source media="(min-width: 768px)" srcset="./assets/about/tablet/image-world-class-talent.jpg">
+          <img class="h-full w-full" src="./assets/about/mobile/image-world-class-talent.jpg"
+            alt="team sitting together">
+        </picture>
 
-  Australia
-  See location
+        <div class="about-article-block__text grid align-content-center text-center lg:text-left">
+          <h2 class="heading-2 text-peach">World-class talent</h2>
+          <p class="paragraph">
+            We are a crew of strategists, problem-solvers, and technologists. Every design is thoughtfully
+            crafted from concept to launch, ensuring success in its given market. We are constantly updating
+            our skills in a myriad of platforms.
+          </p>
 
-  United Kingdom
-  See location
+          <p class="paragraph">
+            Our team is multi-disciplinary and we are not merely interested in form — content and meaning
+            are just as important. We give great importance to craftsmanship, service, and prompt delivery.
+            Clients have always been impressed with our high-quality outcomes that encapsulates their
+            brand’s story and mission.
+          </p>
+        </div>
+      </article>
 
-  Let’s talk about your project
-  Ready to take it to the next level? Contact us today and find out how our expertise can
-  help your business grow.
-  Get in touch
 
-  Our company
-  Locations
-  Contact
+      <div class="locations grid lg:grid-col-3">
+        <div class="locations__item grid justify-items-center">
+          <div class="locations__item-img locations__item-img--1">
+            <img src="./assets/shared/desktop/illustration-canada.svg" alt="canada">
+          </div>
 
-  Designo Central Office
-  3886 Wellington Street
-  Toronto, Ontario M9C 3J5
+          <h3 class="heading-3">canada</h3>
+          <a href="locations.html" class="btn btn--peach">see location</a>
+        </div>
 
-  Contact Us (Central Office)
-  P : +1 253-863-8967
-  M : contact@designo.co
+        <div class="locations__item grid justify-items-center">
+          <div class="locations__item-img locations__item-img--2">
+            <img src="./assets/shared/desktop/illustration-australia.svg" alt="canada">
+          </div>
+
+          <h3 class="heading-3">Australia</h3>
+          <a href="locations.html" class="btn btn--peach">see location</a>
+        </div>
+
+        <div class="locations__item grid justify-items-center">
+          <div class="locations__item-img locations__item-img--3">
+            <img src="./assets/shared/desktop/illustration-united-kingdom.svg" alt="canada">
+          </div>
+
+          <h3 class="heading-3">United Kingdom</h3>
+          <a href="locations.html" class="btn btn--peach">see location</a>
+        </div>
+      </div>
+
+
+      <article class="about-article-block flex flex-col lg:flex-row roundness-from-md">
+        <picture class="lg:order-2">
+          <source media="(min-width: 992px)" srcset="./assets/about/desktop/image-real-deal.jpg">
+          <source media="(min-width: 768px)" srcset="./assets/about/tablet/image-real-deal.jpg">
+          <img class="h-full w-full" src="./assets/about/mobile/image-real-deal.jpg" alt="team sitting together">
+        </picture>
+
+        <div class="about-article-block__text grid align-content-center text-center lg:text-left lg:order-1">
+          <h2 class="heading-2 text-peach">The real deal</h2>
+          <p class="paragraph">
+            As strategic partners in our clients’ businesses, we are ready to take on any challenge as our own.
+            Solving real problems require empathy and collaboration, and we strive to bring a fresh perspective to every
+            opportunity. We make design and technology more accessible and give you tools to measure success.
+          </p>
+
+          <p class="paragraph">
+            We are visual storytellers in appealing and captivating ways. By combining business and marketing
+            strategies,
+            we inspire audiences to take action and drive real results.
+
+          </p>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <footer class="footer footer--more-pad relative">
+    <!-- CTA BANNER -->
+    <article class="cta-banner container">
+      <div class="cta-banner__inner has-roundness">
+        <div class="cta-banner__text text-center lg:text-left">
+          <h3 class="heading">Let’s talk about your project</h3>
+          <p class="paragraph">
+            Ready to take it to the next level? Contact us today and find out how our expertise can help your business
+            grow.
+          </p>
+        </div>
+        <a href="contact.html" class="btn btn--white">Get in touch</a>
+      </div>
+    </article>
+    <!-- CTA BANNER -->
+    <div class="container">
+      <nav class="footer__nav nav flex-col md:flex-row">
+        <a href="index.html" class="logo"><img src="./assets/shared/desktop/logo-light.png" alt="designo logo"></a>
+        <div class="footer__nav-hr hide-from-md"></div>
+        <ul class="footer__nav-list nav__list flex flex-col md:flex-row text-center">
+          <li><a href="about.html">our company</a></li>
+          <li><a href="locations.html">locations</a></li>
+          <li><a href="contact.html">contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer__details md:text-left text-center">
+        <div class="footer__details-contact text-white">
+          <p class="text-bold">Designo Central Office</b></p>
+          <p>3886 Wellington Street</p>
+          <p>Toronto, Ontario M9C 3J5</p>
+        </div>
+
+        <div class="footer__details-contact text-white text-bold">
+          <p>Contact Us (Central Office)</b></p>
+          <p>P : +1 253-863-8967</b></p>
+          <p>M : contact@designo.co</b></p>
+        </div>
+
+        <div class="footer__social flex items-center">
+          <a href="https://facebook.com"><img src="./assets/shared/desktop/icon-facebook.svg" alt="facebook icon"></a>
+          <a href="https://youtube.com"><img src="./assets/shared/desktop/icon-youtube.svg" alt="youtube icon"></a>
+          <a href="https://twitter.com"><img src="./assets/shared/desktop/icon-twitter.svg" alt="twitter icon"></a>
+          <a href="https://pinterest.com"><img src="./assets/shared/desktop/icon-pinterest.svg"
+              alt="pinterest icon"></a>
+          <a href="https://instagram.com"><img src="./assets/shared/desktop/icon-instagram.svg"
+              alt="instagram icon"></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="js/script.js"></script>
 </body>
 
 </html>

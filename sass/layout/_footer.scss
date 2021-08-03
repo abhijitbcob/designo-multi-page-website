@@ -4,12 +4,33 @@
 @use '../abstracts'as *;
 
 .footer {
-    background-color: var(--color-dark-grey);
-    padding-top: 21.3rem;
-    padding-bottom: 7.2rem;
+    background-color: var(--color-black);
 
-    @include respond-to(medium) {
-        padding-top: 14.4rem;
+    &--less-pad {
+        padding-block: 6.4rem;
+
+        @include respond-to(medium) {
+            padding-block: 8rem;
+        }
+
+        @include respond-to(large) {
+            padding-block: 7.2rem;
+        }
+    }
+
+    &--more-pad {
+        padding-top: 21.3rem;
+        padding-bottom: 6.4rem;
+
+        @include respond-to(medium) {
+            padding-top: 16.6rem;
+            padding-bottom: 8rem;
+        }
+
+        @include respond-to(large) {
+            padding-top: 14.4rem;
+            padding-bottom: 7.2rem;
+        }
     }
 
     &__nav {

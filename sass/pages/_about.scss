@@ -1,0 +1,136 @@
+@use '../abstracts'as *;
+
+
+.about-hero-article {
+    &__text {
+        background-color: var(--color-peach);
+        background-image: url('../../assets/about/mobile/bg-pattern-hero-about-mobile.svg');
+        background-repeat: no-repeat;
+
+        background-position: right -13rem;
+        width: 100%;
+        padding-inline: 2.4rem;
+        padding-block: 8rem;
+        grid-gap: 2.4rem;
+
+        @include respond-to(medium) {
+            padding-block: 6.4rem;
+            padding-inline: 5.8rem;
+            grid-gap: 3.2rem;
+
+            background-image: url('../../assets/about/desktop/bg-pattern-hero-about-desktop.svg');
+            background-position: left bottom;
+            background-size: 100%;
+        }
+
+        @include respond-to(large) {
+            padding-left: 9.5rem;
+            padding-right: 8.2rem;
+            max-width: 64rem;
+        }
+    }
+}
+
+.roundness-from-md {
+    @include respond-to(medium) {
+        border-radius: var(--roundness);
+        overflow: hidden;
+    }
+}
+
+
+.about-main {
+    @include respond-to(large) {
+        background-image: url('../../assets/shared/desktop/bg-pattern-leaf.svg');
+        background-repeat: no-repeat;
+        background-position-x: 0;
+        background-position-y: 32rem;
+    }
+}
+
+
+.about-article-block {
+    &__text {
+        background-color: var(--color-lighter-peach);
+        background-image: url('../../assets/shared/desktop/bg-pattern-two-circles.svg');
+        background-repeat: no-repeat;
+        background-position: left bottom;
+        padding-inline: 2.4rem;
+        padding-block: 8rem;
+
+        @include respond-to(medium) {
+            padding-inline: 5.8rem;
+            padding-block: 6.8rem;
+
+        }
+
+        @include respond-to(large) {
+            max-width: 63.5rem;
+            width: 100%;
+            padding-inline: 9.6rem;
+        }
+
+        .paragraph {
+            margin-top: 2.4rem;
+        }
+    }
+
+
+    &:is(.first-block) {
+
+        @include respond-to(medium) {
+            margin-top: 12rem;
+        }
+
+        @include respond-to(large) {
+            margin-top: 16rem;
+        }
+    }
+}
+
+// Locations
+.locations {
+    grid-gap: 8rem;
+    padding-block: 12rem;
+
+    @include respond-to(large) {
+        grid-gap: 3rem;
+        padding-block: 16rem;
+    }
+
+    &__item {
+        h3 {
+            margin-top: 4.8rem;
+        }
+
+        .btn {
+            margin-top: 3.2rem;
+        }
+
+        &-img {
+            position: relative;
+
+            &::before {
+                content: '';
+                position: absolute;
+                inset: 0;
+                background-image: url('../../assets/shared/desktop/bg-pattern-small-circle.svg');
+                background-repeat: no-repeat;
+            }
+
+            &--1 {
+                &::before {
+                    transform: rotate(90deg);
+                }
+            }
+
+
+            &--3 {
+                &::before {
+                    transform: rotate(-90deg);
+                }
+            }
+        }
+
+    }
+}

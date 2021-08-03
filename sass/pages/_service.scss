@@ -1,0 +1,124 @@
+@use '../abstracts'as *;
+
+// SERVICE BANNER
+.service-top-banner {
+    padding: 6.4rem 2.4rem;
+    background-color: var(--color-peach);
+    background-repeat: no-repeat;
+    background-position: center right;
+
+
+    &__inner {
+        max-width: 40rem;
+        margin-inline: auto;
+
+        h2 {
+            margin-bottom: 2.4rem;
+        }
+    }
+}
+
+.web-design-banner {
+    background-image: url('../../assets/web-design/desktop/bg-pattern-intro-web.svg');
+}
+
+.app-design-banner {
+    background-image: url('../../assets/app-design/desktop/bg-pattern-intro-app.svg');
+}
+
+.graphic-design-banner {
+    background-image: url('../../assets/graphic-design/desktop/bg-pattern-intro-graphic.svg');
+}
+
+
+// leaf pattern bg
+.service-main {
+
+    &::before {
+        display: none;
+        content: '';
+        position: absolute;
+        top: 12.6rem;
+        left: 0;
+        width: 1006px;
+        height: 594px;
+        background-image: url('../../assets/shared/desktop/bg-pattern-leaf.svg');
+        z-index: -1;
+
+        @include respond-to(large) {
+            display: block;
+        }
+    }
+}
+
+// SERVICE PORTFOLIO ITEM
+.service-portfolio {
+    grid-row-gap: 3.2rem;
+    grid-column-gap: 3rem;
+
+    &__item {
+        position: relative;
+        border-radius: var(--roundness);
+        overflow: hidden;
+        cursor: pointer;
+        display: grid;
+
+        grid-auto-flow: row;
+        grid-template-columns: 1fr;
+
+        @include respond-to(medium) {
+            grid-auto-flow: column;
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include respond-to(large) {
+            grid-auto-flow: row;
+            grid-template-columns: 1fr;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        figcaption {
+            background-color: hsl(14, 76%, 97%);
+            padding: 3.2rem;
+            text-align: center;
+            display: grid;
+            align-content: center;
+            grid-gap: 1.6rem;
+            transition-property: background-color, color;
+            transition-duration: 275ms;
+            transition-timing-function: ease-in;
+
+            h3 {
+                color: var(--color-peach);
+                transition: inherit;
+            }
+
+            p {
+                transition: inherit;
+            }
+        }
+
+        &:hover figcaption {
+            background-color: var(--color-peach);
+            color: var(--color-white);
+
+            h3 {
+                color: var(--color-white);
+
+            }
+        }
+    }
+}
+
+
+// RELATED SERVICES
+.related-services {
+    grid-gap: 2.4rem;
+
+    @include respond-to(large) {
+        grid-gap: 3rem;
+    }
+}

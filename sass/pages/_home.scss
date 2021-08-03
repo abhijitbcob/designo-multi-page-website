@@ -247,7 +247,6 @@
 // Home bg pattern leaf
 
 .home-main {
-    position: relative;
 
     &::before,
     &::after {
@@ -274,4 +273,5 @@
         transform: rotate(-180deg);
         z-index: -1;
     }
+
 }

@@ -10,47 +10,166 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;700&display=swap" rel="stylesheet">
   <title>Frontend Mentor | Designo Agency Website Challenge</title>
+  <link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body>
-  Our Company
-  Locations
-  Contact
+  <header class="header">
+    <div class="container">
+      <nav class="header__nav nav">
+        <a href="index.html" class="logo"><img src="./assets/shared/desktop/logo-dark.png" alt="designo logo"></a>
 
-  Graphic design
-  We deliver eye-catching branding materials that are tailored to meet your business objectives.
+        <ul class="nav__list flex hide-upto-md">
+          <li><a href="about.html">our company</a></li>
+          <li><a href="locations.html">locations</a></li>
+          <li><a href="contact.html">contact</a></li>
+        </ul>
 
-  Tim Brown
-  A book cover designed for Tim Brown’s new release, ‘Change’
+        <button id="menu-toggler">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+    </div>
 
-  Boxed water
-  A simple packaging concept made for Boxed Water
+    <div class="overlay">
+      <nav class="mobile-nav">
+        <ul class="mobile-nav-list">
+          <li><a href="about.html">our company</a></li>
+          <li><a href="locations.html">locations</a></li>
+          <li><a href="contact.html">contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-  Science!
-  A poster made in collaboration with the Federal Art Project
+  <main class="u-main-huge-pb service-main relative">
+    <div class="container">
+      <article class="service-top-banner graphic-design-banner has-roundness">
+        <div class="service-top-banner__inner text-center text-white">
+          <h2 class="heading-2">Graphic design</h2>
+          <p class="paragraph">
+            We deliver eye-catching branding materials that are tailored to meet your business objectives.
+          </p>
+        </div>
+      </article>
 
-  App Design
-  View Projects
+      <div class="service-portfolio grid lg:grid-col-3 u-mt-160-res">
+        <figure class="service-portfolio__item">
+          <img src="./assets/graphic-design/desktop/image-change.jpg" alt="graphic screenshot">
+          <figcaption>
+            <h3 class="heading-3">Tim Brown</h3>
+            <p class="paragraph">
+              A book cover designed for Tim Brown’s new release, ‘Change’
+            </p>
+          </figcaption>
+        </figure>
 
-  Web Design
-  View Projects
+        <figure class="service-portfolio__item">
+          <img src="./assets/graphic-design/desktop/image-boxed-water.jpg" alt="graphic screenshot">
+          <figcaption>
+            <h3 class="heading-3">Boxed water</h3>
+            <p class="paragraph">
+              A simple packaging concept made for Boxed Water
+            </p>
+          </figcaption>
+        </figure>
 
-  Let’s talk about your project
-  Ready to take it to the next level? Contact us today and find out how our expertise can
-  help your business grow.
-  Get in touch
+        <figure class="service-portfolio__item">
+          <img src="./assets/graphic-design/desktop/image-science.jpg" alt="graphic screenshot">
+          <figcaption>
+            <h3 class="heading-3">Science!</h3>
+            <p class="paragraph">
+              A poster made in collaboration with the Federal Art Project
+            </p>
+          </figcaption>
+        </figure>
+      </div>
 
-  Our company
-  Locations
-  Contact
+      <div class="related-services grid lg:grid-col-2 u-mt-160-res">
+        <div class="service">
+          <picture>
+            <source media="(min-width: 992px)" srcset="./assets/home/desktop/image-app-design.jpg">
+            <source media="(min-width: 768px)" srcset="./assets/home/tablet/image-app-design.jpg">
+            <img src="./assets/home/mobile/image-app-design.jpg" alt="app design">
+          </picture>
+          <div class="service__text">
+            <h2 class="heading-2 text-white">app Design</h2>
+            <a href="app-design.html">view projects <img src="./assets/shared/desktop/icon-right-arrow.svg"
+                alt="right arrow"></a>
+          </div>
+        </div>
+        <div class="service">
+          <picture>
+            <source media="(min-width: 992px)" srcset="./assets/home/desktop/image-web-design-small.jpg">
+            <source media="(min-width: 768px)" srcset="./assets/home/tablet/image-web-design.jpg">
+            <img src="./assets/home/mobile/image-web-design.jpg" alt="web design">
+          </picture>
+          <div class="service__text">
+            <h2 class="heading-2 text-white">Web Design</h2>
+            <a href="web-design.html">view projects <img src="./assets/shared/desktop/icon-right-arrow.svg"
+                alt="right arrow"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
 
-  Designo Central Office
-  3886 Wellington Street
-  Toronto, Ontario M9C 3J5
+  <footer class="footer footer--more-pad relative">
+    <!-- CTA BANNER -->
+    <article class="cta-banner container">
+      <div class="cta-banner__inner has-roundness">
+        <div class="cta-banner__text text-center lg:text-left">
+          <h3 class="heading">Let’s talk about your project</h3>
+          <p class="paragraph">
+            Ready to take it to the next level? Contact us today and find out how our expertise can help your business
+            grow.
+          </p>
+        </div>
+        <a href="contact.html" class="btn btn--white">Get in touch</a>
+      </div>
+    </article>
+    <!-- CTA BANNER -->
+    <div class="container">
+      <nav class="footer__nav nav flex-col md:flex-row">
+        <a href="index.html" class="logo"><img src="./assets/shared/desktop/logo-light.png" alt="designo logo"></a>
+        <div class="footer__nav-hr hide-from-md"></div>
+        <ul class="footer__nav-list nav__list flex flex-col md:flex-row text-center">
+          <li><a href="about.html">our company</a></li>
+          <li><a href="locations.html">locations</a></li>
+          <li><a href="contact.html">contact</a></li>
+        </ul>
+      </nav>
 
-  Contact Us (Central Office)
-  P : +1 253-863-8967
-  M : contact@designo.co
+      <div class="footer__details md:text-left text-center">
+        <div class="footer__details-contact text-white">
+          <p class="text-bold">Designo Central Office</b></p>
+          <p>3886 Wellington Street</p>
+          <p>Toronto, Ontario M9C 3J5</p>
+        </div>
+
+        <div class="footer__details-contact text-white text-bold">
+          <p>Contact Us (Central Office)</b></p>
+          <p>P : +1 253-863-8967</b></p>
+          <p>M : contact@designo.co</b></p>
+        </div>
+
+        <div class="footer__social flex items-center">
+          <a href="https://facebook.com"><img src="./assets/shared/desktop/icon-facebook.svg" alt="facebook icon"></a>
+          <a href="https://youtube.com"><img src="./assets/shared/desktop/icon-youtube.svg" alt="youtube icon"></a>
+          <a href="https://twitter.com"><img src="./assets/shared/desktop/icon-twitter.svg" alt="twitter icon"></a>
+          <a href="https://pinterest.com"><img src="./assets/shared/desktop/icon-pinterest.svg"
+              alt="pinterest icon"></a>
+          <a href="https://instagram.com"><img src="./assets/shared/desktop/icon-instagram.svg"
+              alt="instagram icon"></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./js/script.js"></script>
 </body>
 
 </html>

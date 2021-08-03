@@ -16,12 +16,12 @@
 
 .lg\:grid-col-2 {
     @include respond-to(large) {
-        grid-template-columns: repeat(2, minmax(0, 1fr)); // used
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
 
 .lg\:grid-col-3 {
     @include respond-to(large) {
-        grid-template-columns: repeat(3, minmax(0, 1fr)); // used
+        grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 }

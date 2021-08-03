@@ -8,46 +8,145 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,500;0,700;1,400&display=swap"
+    rel="stylesheet">
   <title>Frontend Mentor | Designo Agency Website Challenge</title>
+  <link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body>
-  Our Company
-  Locations
-  Contact
+  <header class="header">
+    <div class="container">
+      <nav class="header__nav nav">
+        <a href="index.html" class="logo"><img src="./assets/shared/desktop/logo-dark.png" alt="designo logo"></a>
 
-  Contact us
-  Ready to take it to the next level? Let’s talk about your project or idea and find out how
-  we can help your business grow. If you are looking for unique digital experiences that’s
-  relatable to your users, drop us a line.
+        <ul class="nav__list flex hide-upto-md">
+          <li><a href="about.html">our company</a></li>
+          <li><a href="locations.html">locations</a></li>
+          <li><a href="contact.html">contact</a></li>
+        </ul>
 
-  Name
-  Email address
-  Phone
-  Your message
-  Submit
+        <button id="menu-toggler">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+    </div>
 
-  Canada
-  See location
+    <div class="overlay">
+      <nav class="mobile-nav">
+        <ul class="mobile-nav-list">
+          <li><a href="about.html">our company</a></li>
+          <li><a href="locations.html">locations</a></li>
+          <li><a href="contact.html">contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-  Australia
-  See location
+  <main class="contact-main">
+    <div class="container-sm">
+      <div class="grid roundness-from-md contact-form-block lg:grid-col-2">
+        <article class="text-white grid align-content-center text-center md:text-left">
+          <h1 class="heading-1">Contact Us</h1>
+          <p class="paragraph">
+            Ready to take it to the next level? Let’s talk about your project or idea and find out how
+            we can help your business grow. If you are looking for unique digital experiences that’s
+            relatable to your users, drop us a line.
+          </p>
+        </article>
+        <form action="#" class="form">
+          <div class="form__group">
+            <input type="text" name="fullName" id="fullName" class="form__input" placeholder="Name" autocomplete="off">
+          </div>
+          <div class="form__group">
+            <input type="text" name="emailId" id="emailId" class="form__input" placeholder="Email" autocomplete="off">
+          </div>
+          <div class="form__group">
+            <input type="text" name="phone" id="phone" class="form__input" placeholder="Phone" autocomplete="off">
+          </div>
+          <div class="form__group">
+            <textarea type="text" name="message" id="message" class="form__input" placeholder="Message"
+              autocomplete="off"></textarea>
+          </div>
 
-  United Kingdom
-  See location
+          <button class="btn btn--white btn-submit">SUBMIT</button>
+        </form>
+      </div>
 
-  Our company
-  Locations
-  Contact
+      <div class="locations grid lg:grid-col-3">
+        <div class="locations__item grid justify-items-center">
+          <div class="locations__item-img locations__item-img--1">
+            <img src="./assets/shared/desktop/illustration-canada.svg" alt="canada">
+          </div>
 
-  Designo Central Office
-  3886 Wellington Street
-  Toronto, Ontario M9C 3J5
+          <h3 class="heading-3">canada</h3>
+          <a href="locations.html" class="btn btn--peach">see location</a>
+        </div>
 
-  Contact Us (Central Office)
-  P : +1 253-863-8967
-  M : contact@designo.co
+        <div class="locations__item grid justify-items-center">
+          <div class="locations__item-img locations__item-img--2">
+            <img src="./assets/shared/desktop/illustration-australia.svg" alt="canada">
+          </div>
+
+          <h3 class="heading-3">Australia</h3>
+          <a href="locations.html" class="btn btn--peach">see location</a>
+        </div>
+
+        <div class="locations__item grid justify-items-center">
+          <div class="locations__item-img locations__item-img--3">
+            <img src="./assets/shared/desktop/illustration-united-kingdom.svg" alt="canada">
+          </div>
+
+          <h3 class="heading-3">United Kingdom</h3>
+          <a href="locations.html" class="btn btn--peach">see location</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+  <footer class="footer footer--less-pad relative">
+
+    <div class="container">
+      <nav class="footer__nav nav flex-col md:flex-row">
+        <a href="index.html" class="logo"><img src="./assets/shared/desktop/logo-light.png" alt="designo logo"></a>
+        <div class="footer__nav-hr hide-from-md"></div>
+        <ul class="footer__nav-list nav__list flex flex-col md:flex-row text-center">
+          <li><a href="about.html">our company</a></li>
+          <li><a href="locations.html">locations</a></li>
+          <li><a href="contact.html">contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer__details md:text-left text-center">
+        <div class="footer__details-contact text-white">
+          <p class="text-bold">Designo Central Office</b></p>
+          <p>3886 Wellington Street</p>
+          <p>Toronto, Ontario M9C 3J5</p>
+        </div>
+
+        <div class="footer__details-contact text-white text-bold">
+          <p>Contact Us (Central Office)</b></p>
+          <p>P : +1 253-863-8967</b></p>
+          <p>M : contact@designo.co</b></p>
+        </div>
+
+        <div class="footer__social flex items-center">
+          <a href="https://facebook.com"><img src="./assets/shared/desktop/icon-facebook.svg" alt="facebook icon"></a>
+          <a href="https://youtube.com"><img src="./assets/shared/desktop/icon-youtube.svg" alt="youtube icon"></a>
+          <a href="https://twitter.com"><img src="./assets/shared/desktop/icon-twitter.svg" alt="twitter icon"></a>
+          <a href="https://pinterest.com"><img src="./assets/shared/desktop/icon-pinterest.svg"
+              alt="pinterest icon"></a>
+          <a href="https://instagram.com"><img src="./assets/shared/desktop/icon-instagram.svg"
+              alt="instagram icon"></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="./js/script.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,49 @@
+@use '../abstracts'as *;
+
+.location {
+    @include respond-to(medium) {
+        gap: 3rem;
+    }
+
+    &__details {
+        flex-grow: 1;
+        background-color: var(--color-lighter-peach);
+        background-image: url('../../assets/shared/desktop/bg-pattern-two-circles.svg');
+        background-repeat: no-repeat;
+        background-position: bottom;
+
+
+        display: flex;
+        justify-content: center;
+        padding-inline: 2.4rem;
+
+        &-inner {
+            max-width: 54rem;
+            width: 100%;
+            grid-gap: 2.4rem;
+
+            padding-block: 8rem;
+            justify-items: center;
+
+            @include respond-to(medium) {
+                padding-block: 8.8rem;
+                justify-items: start;
+
+                .heading-2 {
+                    grid-row: 1/2;
+                    grid-column: 1/-1;
+                }
+            }
+        }
+
+    }
+
+
+    &+& {
+        margin-top: 4rem;
+
+        @include respond-to(medium) {
+            margin-top: 3.2rem;
+        }
+    }
+}

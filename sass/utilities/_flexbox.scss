@@ -13,3 +13,10 @@
         flex-direction: row;
     }
 }
+
+
+.lg\:flex-row {
+    @include respond-to(large) {
+        flex-direction: row;
+    }
+}
