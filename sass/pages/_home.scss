@@ -51,12 +51,12 @@
 
         .paragraph {
             max-width: 45rem;
-            margin-top: 2.5rem;
+            margin-top: 2.85rem;
             margin-bottom: 1.9rem;
 
             @include respond-to(large) {
                 max-width: 44.5rem;
-                margin-bottom: 4rem;
+                margin-bottom: 4.35rem;
             }
         }
     }
@@ -71,7 +71,7 @@
         margin-top: -3rem;
 
         @include respond-to(large) {
-            background-position: center -2.5rem;
+            background-position: center -3.5rem;
             height: auto;
             margin-top: 0;
         }
@@ -145,6 +145,8 @@
         align-content: center;
         justify-items: center;
         grid-gap: 1.2rem;
+        text-transform: uppercase;
+
 
         @include respond-to(medium) {
             grid-gap: 2.4rem;
@@ -157,7 +159,6 @@
             letter-spacing: var(--ls-5);
             line-height: 2.2rem;
             color: var(--color-white);
-            text-transform: uppercase;
             display: flex;
             align-items: center;
             gap: 2.1rem;
@@ -264,7 +265,7 @@
 
     &::before {
         left: 0;
-        top: 475px;
+        top: 32rem;
     }
 
     &::after {
